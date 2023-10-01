@@ -47,10 +47,9 @@ final class ProductFactory extends ModelFactory
     protected function getDefaults(): array
     {
         return [
-            'name' => self::faker()->text(255),
+            'name' => self::faker()->text(25),
             'description' => self::faker()->paragraph(),
-            'price' => 10,
-            'slug' => self::faker()->text(255),
+            'price' => self::faker()->randomFloat(2, 150, 1000),
         ];
     }
 
