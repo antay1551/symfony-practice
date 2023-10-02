@@ -7,10 +7,14 @@
         {% for product in products %}
             <div class="col">
                 <div class="card h-100">
-                    <img src="#" class="card-img-top" alt="photo">
+                    <img width="150" height="550" src="{{ asset('images/product.png') }}" class="card-img-top" alt="photo">
                     <div class="card-body">
                         <h5 class="card-title">{{ product.name }}</h5>
                         <p class="card-text">{{ product.description }}</p>
+
+                        <a href="{{ path('app_product_show', { slug: product.slug }) }}" class="btn btn-secondary">
+                            See detailed
+                        </a>
                     </div>
                 </div>
             </div>
